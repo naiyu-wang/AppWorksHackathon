@@ -28,6 +28,7 @@ class MyActivityViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addEventButton: UIButton!
     
+    var button: Int = 0
     let eventManager = EventManager.shared
     let userManager = UserManager.shared
     var activities: [[String : Any]] = []
@@ -42,6 +43,8 @@ class MyActivityViewController: UIViewController, UITableViewDelegate, UITableVi
         self.title = Constants.appName
         self.addEventButton.layer.cornerRadius = 8        
         self.activities = self.userManager.activities
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "DEMO", style: .plain, target: self, action: #selector(triggerNotification))
         
 //        if let user = UserManager.shared.user {
         
@@ -60,6 +63,13 @@ class MyActivityViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        self.activities = self.userManager.activities
         self.tableView.reloadData()
     }
     
@@ -118,8 +128,18 @@ class MyActivityViewController: UIViewController, UITableViewDelegate, UITableVi
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
+    func triggerNotification() {
+        
+        var vc = PlanBViewController()
+        vc.activityId = button
+        button += 1
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func addEvent(_ sender: UIButton) {
     
-    
+        let vc = CreateEventTableViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

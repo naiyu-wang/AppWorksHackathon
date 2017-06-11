@@ -183,6 +183,7 @@
 				TargetAttributes = {
 					27166B381EEBA3D200418212 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3KFEDLNKXG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -416,7 +417,7 @@
 			baseConfigurationReference = 8928074F42D9D0277CD2378E /* Pods-PlanB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3KFEDLNKXG;
 				INFOPLIST_FILE = PlanB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.PlanB;
@@ -430,7 +431,7 @@
 			baseConfigurationReference = A6F9F0B52C1D231350B54624 /* Pods-PlanB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3KFEDLNKXG;
 				INFOPLIST_FILE = PlanB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.PlanB;

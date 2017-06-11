@@ -47,33 +47,63 @@ class ActivityDetailsViewController: UIViewController, MKMapViewDelegate {
         self.monthLabel.text = self.details["actMonth"] as? String ?? "May, Monday"
         self.timeLabel.text = self.details["actTime"] as? String ?? "09:10 AM"
         let people = self.details["people"] as? String ?? "1"
+        let b = self.details["B"] as? Bool ?? true
         self.joinLabel.text = "\(people) people are going"
         
         switch self.details["type"] as? String ?? "----" {
             
         case "movie":
-            self.planBImage.image = UIImage(named: "moviePlanA")
+            if b == false {
+                
+                self.planBImage.image = UIImage(named: "moviePlanA")
+            } else {
+                
+                self.planBImage.image = UIImage(named: "moviePlanB")
+            }
             self.tagImageView.image = UIImage(named: "movie")
             
         case "food":
-            self.planBImage.image = UIImage(named: "foodPlanA")
+            if b == false {
+                
+                self.planBImage.image = UIImage(named: "foodPlanA")
+            } else {
+                
+                self.planBImage.image = UIImage(named: "foodPlanB")
+            }
             self.tagImageView.image = UIImage(named: "food")
             
         case "outdoor":
-            self.planBImage.image = UIImage(named: "weatherPlanA")
+            if b == false {
+                
+                self.planBImage.image = UIImage(named: "weatherPlanA")
+            } else {
+                
+                self.planBImage.image = UIImage(named: "weatherPlanB")
+            }
             self.tagImageView.image = UIImage(named: "outdoor")
             
         case "sport":
-            self.planBImage.image = UIImage(named: "weatherPlanA")
+            if b == false {
+                
+                self.planBImage.image = UIImage(named: "weatherPlanA")
+            } else {
+                
+                self.planBImage.image = UIImage(named: "weatherPlanB")
+            }
             self.tagImageView.image = UIImage(named: "sport")
             
         case "shopping":
-            self.planBImage.image = UIImage(named: "weatherPlanA")
+            if b == false {
+                
+                self.planBImage.image = UIImage(named: "weatherPlanA")
+            } else {
+                
+                self.planBImage.image = UIImage(named: "weatherPlanB")
+            }
             self.tagImageView.image = UIImage(named: "shopping")
             
         default: break
         }
- 
     }
 
     func setUpMap() {

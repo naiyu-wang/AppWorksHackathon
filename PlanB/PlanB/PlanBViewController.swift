@@ -24,8 +24,9 @@ class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView: UITableView!
     
-    let planBLists: [[String : Any]] = []
-    let activityId: Int! = 0
+    var planBLists: [[String : Any]] = []
+    let userManager = UserManager.shared
+    var activityId: Int! = 0
     
     override func viewDidLoad() {
         
@@ -33,6 +34,21 @@ class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "PlanBTableViewCell", bundle: nil), forCellReuseIdentifier: "planBCell")
+        
+        switch activityId {
+            
+        case 0:
+            self.planBLists = self.userManager.planBOutdoor
+            
+        case 1:
+            self.planBLists = self.userManager.planBFood
+            
+        case 2:
+            self.planBLists = self.userManager.planBMovie
+            
+        default: break
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,13 +111,11 @@ class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let alert = UIAlertController(title: "Whaaaaaaaat", message: "There is always a plan B, but you reject it", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "我知錯了", style: .default, handler: { action in
         
-            let myActivityVC = MyActivityViewController()
-            self.present(myActivityVC, animated: true, completion: {
-            self.dismiss(animated: true, completion: nil)
-            })
+            self.navigationController?.popViewController(animated: true)
         })
         
         alert.addAction(alertAction)
+        self.present(alert, animated: true, completion: nil)
         print("reject")
     }
     
@@ -113,13 +127,11 @@ class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let alert = UIAlertController(title: "Fantastic", message: "There is always a plan B, and you accept it", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "帶我走", style: .default, handler: { action in
             
-            let myActivityVC = MyActivityViewController()
-            self.present(myActivityVC, animated: true, completion: {
-            self.dismiss(animated: true, completion: nil)
-            })
+            self.navigationController?.popViewController(animated: true)
         })
         
         alert.addAction(alertAction)
+        self.present(alert, animated: true, completion: nil)
         print("accpet")
     }
 }
