@@ -24,6 +24,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         self.userDefault.set("FB_Fake", forKey: "FacebookID")
+        self.userManager.addFirstActivities()
+        self.userManager.addOutdoorActivities()
+        self.userManager.addMovieActivities()
+        self.userManager.addFoodActivities()
         
         self.loginButton.layer.cornerRadius = 10
         self.loginButton.alpha = 0
