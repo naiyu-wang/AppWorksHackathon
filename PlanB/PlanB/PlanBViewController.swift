@@ -18,7 +18,6 @@ class PlanBTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var rejectButton: UIButton!
     @IBOutlet weak var acceptButton: UIButton!
-
 }
 
 class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -26,7 +25,7 @@ class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     let planBLists: [[String : Any]] = []
-    let activityId: Int!
+    let activityId: Int! = 0
     
     override func viewDidLoad() {
         
@@ -59,26 +58,26 @@ class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.rejectButton.tag = indexPath.row
         cell.acceptButton.tag = indexPath.row
         
-        cell.titleLabel.text = self.activities[indexPath.row]["title"] as? String ?? "----"
-        cell.locationLabel.text = self.activities[indexPath.row]["actPlace"] as? String ?? "----"
-        cell.descriptionLabel.text = self.activities[indexPath.row]["description"] as? String ?? "----"
+        cell.titleLabel.text = self.planBLists[indexPath.row]["title"] as? String ?? "----"
+        cell.locationLabel.text = self.planBLists[indexPath.row]["actPlace"] as? String ?? "----"
+        cell.descriptionLabel.text = self.planBLists[indexPath.row]["description"] as? String ?? "----"
         
-        switch self.activities[indexPath.row]["type"] as? String ?? "----" {
+        switch self.planBLists[indexPath.row]["type"] as? String ?? "----" {
             
         case "movie":
-            cell.tagImage.image = UIImage(named: "movie")
+            cell.tagImageView.image = UIImage(named: "movie")
             
         case "food":
-            cell.tagImage.image = UIImage(named: "food")
+            cell.tagImageView.image = UIImage(named: "food")
             
         case "outdoor":
-            cell.tagImage.image = UIImage(named: "outdoor")
+            cell.tagImageView.image = UIImage(named: "outdoor")
             
         case "sport":
-            cell.tagImage.image = UIImage(named: "sport")
+            cell.tagImageView.image = UIImage(named: "sport")
             
         case "shopping":
-            cell.tagImage.image = UIImage(named: "shopping")
+            cell.tagImageView.image = UIImage(named: "shopping")
             
         default: break
         }
@@ -94,13 +93,15 @@ class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func reject(sender: UIButton) {
         
         let alert = UIAlertController(title: "Whaaaaaaaat", message: "There is always a plan B, but you reject it", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "我知錯了", style: .default, handler: {
+        let alertAction = UIAlertAction(title: "我知錯了", style: .default, handler: { action in
         
             let myActivityVC = MyActivityViewController()
-            self.present(MyActivityViewController, animated: true, completion: {
+            self.present(myActivityVC, animated: true, completion: {
             self.dismiss(animated: true, completion: nil)
             })
         })
+        
+        alert.addAction(alertAction)
         print("reject")
     }
     
@@ -110,13 +111,15 @@ class PlanBViewController: UIViewController, UITableViewDelegate, UITableViewDat
         UserManager.shared.activities[activityId] = planB
         
         let alert = UIAlertController(title: "Fantastic", message: "There is always a plan B, and you accept it", preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "帶我走", style: .default, handler: {
+        let alertAction = UIAlertAction(title: "帶我走", style: .default, handler: { action in
             
             let myActivityVC = MyActivityViewController()
-            self.present(MyActivityViewController, animated: true, completion: {
+            self.present(myActivityVC, animated: true, completion: {
             self.dismiss(animated: true, completion: nil)
             })
         })
+        
+        alert.addAction(alertAction)
         print("accpet")
     }
 }

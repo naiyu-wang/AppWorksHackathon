@@ -21,7 +21,6 @@ class MyActivityTabelViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var bigView: UIView!
-    
 }
 
 class MyActivityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
