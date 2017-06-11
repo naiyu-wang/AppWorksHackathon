@@ -15,10 +15,10 @@ class EventManager {
     
     typealias getResultSuccess = ([[String : Any]]) -> Void
     typealias getResultFailed = () -> Void
-    func getMyActivity(success: @escaping getResultSuccess, failed: @escaping getResultFailed) {
+    func getMyActivity(id: String, success: @escaping getResultSuccess, failed: @escaping getResultFailed) {
         
         Alamofire
-            .request(Constants.baseUrlStr + "user/:id", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .request(Constants.baseUrlStr + "user/\(id)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .validate()
             .responseJSON { response in
          
@@ -31,6 +31,30 @@ class EventManager {
                     
                     let activities = value["activity"] as? [[String : Any]] ?? []
                     success(activities)
+                    
+                case .failure(let error):
+                    failed()
+                    print(error)
+                }
+        }
+    }
+    
+    typealias getDetailSuccess = ([String : Any]) -> Void
+    typealias getDetailFailed = () -> Void
+    func getActivityDetails(id: String, success: @escaping getDetailSuccess, failed: @escaping getDetailFailed) {
+        
+        Alamofire
+            .request(Constants.baseUrlStr + "activity/\(id)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .validate()
+            .responseJSON { response in
+                
+                switch response.result {
+                    
+                case .success(let value):
+                    guard let value = value as? [String : Any],
+                        value["status"] as? Int == 0
+                        else { failed(); return }
+                    success(value)
                     
                 case .failure(let error):
                     failed()
