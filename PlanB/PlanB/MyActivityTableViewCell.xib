@@ -71,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="由校友跨屆組成的隊伍，需要在 32 小時內發想創意、分工合作，實際動手開發出能解決真實問題的作品，為生活開創更多可能～ 最終成果明天將在粉專揭曉，敬請期待！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlH-VB-OwP">
-                                <rect key="frame" x="18" y="136.5" width="313" height="29"/>
+                                <rect key="frame" x="18" y="134" width="313" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -85,11 +85,11 @@
                             <constraint firstItem="Xp4-GA-gLM" firstAttribute="top" secondItem="loo-3f-62b" secondAttribute="bottom" constant="20" id="GQF-Je-Xvo"/>
                             <constraint firstItem="IlH-VB-OwP" firstAttribute="leading" secondItem="6FE-jR-06s" secondAttribute="leading" id="GeO-t5-Lwl"/>
                             <constraint firstAttribute="trailing" secondItem="IlH-VB-OwP" secondAttribute="trailing" constant="20" id="Ihc-U3-ntb"/>
-                            <constraint firstAttribute="bottom" secondItem="IlH-VB-OwP" secondAttribute="bottom" constant="8" id="Ogd-cw-zCF"/>
                             <constraint firstItem="loo-3f-62b" firstAttribute="top" secondItem="6FE-jR-06s" secondAttribute="bottom" id="Ojw-MQ-QSI"/>
                             <constraint firstItem="3Co-Rc-rN8" firstAttribute="leading" secondItem="6FE-jR-06s" secondAttribute="trailing" constant="2" id="SSc-iG-Abd"/>
                             <constraint firstItem="6FE-jR-06s" firstAttribute="top" secondItem="xzE-QN-3Pm" secondAttribute="top" id="Xab-Ip-HxR"/>
                             <constraint firstItem="Xp4-GA-gLM" firstAttribute="leading" secondItem="6FE-jR-06s" secondAttribute="leading" id="aBI-Qa-8me"/>
+                            <constraint firstItem="IlH-VB-OwP" firstAttribute="top" secondItem="FyA-ZZ-DT5" secondAttribute="bottom" constant="20" id="ceq-VT-Juc"/>
                             <constraint firstItem="FyA-ZZ-DT5" firstAttribute="leading" secondItem="6FE-jR-06s" secondAttribute="leading" id="eN1-th-oCf"/>
                             <constraint firstItem="xzE-QN-3Pm" firstAttribute="width" secondItem="a8v-YU-nFm" secondAttribute="width" multiplier="0.3" id="f2Z-W4-tZ3"/>
                             <constraint firstAttribute="trailing" secondItem="xzE-QN-3Pm" secondAttribute="trailing" constant="-15" id="kY7-4F-GeK"/>
@@ -109,19 +109,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="En3-Ec-Yue">
-                                <rect key="frame" x="8" y="18" width="37.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.98431372549999996" green="0.68235294120000001" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lDG-zl-bQQ">
+                                <rect key="frame" x="13" y="13" width="26.5" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lDG-zl-bQQ" secondAttribute="height" multiplier="1:1" id="i7R-JF-PFn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="En3-Ec-Yue" firstAttribute="centerY" secondItem="Eb8-BH-seR" secondAttribute="centerY" id="FtC-tX-gMZ"/>
+                            <constraint firstItem="lDG-zl-bQQ" firstAttribute="centerY" secondItem="Eb8-BH-seR" secondAttribute="centerY" id="7gn-RR-Y93"/>
+                            <constraint firstItem="lDG-zl-bQQ" firstAttribute="centerX" secondItem="Eb8-BH-seR" secondAttribute="centerX" id="9MG-Na-BGf"/>
                             <constraint firstItem="KXa-7h-86a" firstAttribute="centerX" secondItem="Eb8-BH-seR" secondAttribute="centerX" id="KeF-Ri-dNB"/>
+                            <constraint firstItem="lDG-zl-bQQ" firstAttribute="width" secondItem="Eb8-BH-seR" secondAttribute="width" multiplier="0.5" id="PUx-SN-vdb"/>
                             <constraint firstAttribute="width" secondItem="Eb8-BH-seR" secondAttribute="height" multiplier="1:1" id="UvT-Qu-Nr4"/>
-                            <constraint firstItem="En3-Ec-Yue" firstAttribute="centerX" secondItem="Eb8-BH-seR" secondAttribute="centerX" id="Ydc-Z6-tJh"/>
                             <constraint firstItem="KXa-7h-86a" firstAttribute="centerY" secondItem="Eb8-BH-seR" secondAttribute="centerY" id="wqh-x5-LWh"/>
                         </constraints>
                     </view>
@@ -144,7 +145,7 @@
                 <outlet property="descriptionLabel" destination="IlH-VB-OwP" id="Uqr-nL-dge"/>
                 <outlet property="locationLabel" destination="FyA-ZZ-DT5" id="kd6-mb-fJR"/>
                 <outlet property="monthLabel" destination="loo-3f-62b" id="jiW-lM-2Fy"/>
-                <outlet property="tagLabel" destination="En3-Ec-Yue" id="UkD-0b-5T9"/>
+                <outlet property="tagImage" destination="lDG-zl-bQQ" id="awX-5u-ugE"/>
                 <outlet property="thLabel" destination="3Co-Rc-rN8" id="0Lo-r9-7h5"/>
                 <outlet property="timeLabel" destination="l39-by-CbC" id="Wjh-5J-2qa"/>
                 <outlet property="timeView" destination="xzE-QN-3Pm" id="vW9-Ji-15x"/>

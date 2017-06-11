@@ -12,6 +12,6 @@ struct Constants {
     
     static let facebookId = "FB_Fake"
     static let appName = "Plan B"
-    static let baseUrlStr = "https://url/v1/"
+    static let baseUrlStr = "http://139.162.119.140:3000/v1/"
     
 }
