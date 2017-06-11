@@ -9,9 +9,10 @@
 import Foundation
 
 struct Constants {
-    
+
     static let facebookId = "FB_Fake"
     static let appName = "Plan B"
-    static let baseUrlStr = "http://139.162.119.140:3000/v1/"
-    
+    static var startTime: String = "Please select start time!"
+    static var endTime: String = "Please select end time!"
+    static let baseUrlStr = "http://139.162.119.140:3000/v1/"    
 }
