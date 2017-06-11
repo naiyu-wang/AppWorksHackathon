@@ -23,7 +23,7 @@
 		27166B641EEC23AB00418212 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166B631EEC23AB00418212 /* EventModel.swift */; };
 		27166B661EEC23BB00418212 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166B651EEC23BB00418212 /* EventManager.swift */; };
 		27166B681EEC23D000418212 /* CreateEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166B671EEC23D000418212 /* CreateEventTableViewController.swift */; };
-		27166B6A1EEC23F300418212 /* CreateEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27166B691EEC23F300418212 /* CreateEventViewController.xib */; };
+		27166B6A1EEC23F300418212 /* CreateEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27166B691EEC23F300418212 /* CreateEventTableViewCell.xib */; };
 		27166B6C1EEC267600418212 /* StaticResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166B6B1EEC267600418212 /* StaticResources.swift */; };
 		8353BEE6F286880E76D6BFAA /* Pods_PlanB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D439583ADB73006DB688AF2 /* Pods_PlanB.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +47,7 @@
 		27166B631EEC23AB00418212 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		27166B651EEC23BB00418212 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		27166B671EEC23D000418212 /* CreateEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventTableViewController.swift; sourceTree = "<group>"; };
-		27166B691EEC23F300418212 /* CreateEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateEventViewController.xib; sourceTree = "<group>"; };
+		27166B691EEC23F300418212 /* CreateEventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateEventTableViewCell.xib; sourceTree = "<group>"; };
 		27166B6B1EEC267600418212 /* StaticResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticResources.swift; sourceTree = "<group>"; };
 		5D439583ADB73006DB688AF2 /* Pods_PlanB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8928074F42D9D0277CD2378E /* Pods-PlanB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlanB/Pods-PlanB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 				27166B631EEC23AB00418212 /* EventModel.swift */,
 				27166B651EEC23BB00418212 /* EventManager.swift */,
 				27166B671EEC23D000418212 /* CreateEventTableViewController.swift */,
-				27166B691EEC23F300418212 /* CreateEventViewController.xib */,
+				27166B691EEC23F300418212 /* CreateEventTableViewCell.xib */,
 				27166B6B1EEC267600418212 /* StaticResources.swift */,
 				27166B401EEBA3D200418212 /* Main.storyboard */,
 				27166B461EEBA3D200418212 /* Assets.xcassets */,
@@ -189,7 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27166B6A1EEC23F300418212 /* CreateEventViewController.xib in Resources */,
+				27166B6A1EEC23F300418212 /* CreateEventTableViewCell.xib in Resources */,
 				27166B4A1EEBA3D200418212 /* LaunchScreen.storyboard in Resources */,
 				27166B5C1EEBE88A00418212 /* LaunchView.xib in Resources */,
 				27166B471EEBA3D200418212 /* Assets.xcassets in Resources */,
