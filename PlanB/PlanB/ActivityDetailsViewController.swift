@@ -52,23 +52,23 @@ class ActivityDetailsViewController: UIViewController, MKMapViewDelegate {
         switch self.details["type"] as? String ?? "----" {
             
         case "movie":
-            self.planBImage.image = UIImage(named: "movieRating")
+            self.planBImage.image = UIImage(named: "moviePlanA")
             self.tagImageView.image = UIImage(named: "movie")
             
         case "food":
-            self.planBImage.image = UIImage(named: "foodRating")
+            self.planBImage.image = UIImage(named: "foodPlanA")
             self.tagImageView.image = UIImage(named: "food")
             
         case "outdoor":
-            self.planBImage.image = UIImage(named: "weather")
+            self.planBImage.image = UIImage(named: "weatherPlanA")
             self.tagImageView.image = UIImage(named: "outdoor")
             
         case "sport":
-            self.planBImage.image = UIImage(named: "weather")
+            self.planBImage.image = UIImage(named: "weatherPlanA")
             self.tagImageView.image = UIImage(named: "sport")
             
         case "shopping":
-            self.planBImage.image = UIImage(named: "weather")
+            self.planBImage.image = UIImage(named: "weatherPlanA")
             self.tagImageView.image = UIImage(named: "shopping")
             
         default: break
@@ -78,13 +78,17 @@ class ActivityDetailsViewController: UIViewController, MKMapViewDelegate {
 
     func setUpMap() {
         
+        let coordinate = self.details["coordinate"] as! (Double, Double)
+        let coordinates = CLLocationCoordinate2DMake(coordinate.0, coordinate.1)
         
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+        let region = MKCoordinateRegion(center: coordinates, span: span)
+        self.mapView.setRegion(region, animated: true)
         
-        
-        
-        
-        
-        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordinates
+        self.mapView.addAnnotation(annotation)
+        self.mapView.centerCoordinate = coordinates
     }
 
 }

@@ -44,9 +44,9 @@ class MyActivityViewController: UIViewController, UITableViewDelegate, UITableVi
         self.addEventButton.layer.cornerRadius = 8
         
         //test
-        let outdoor: [String : Any] = ["activity_id": 0, "title": "簡報松二日遊", "type":"outdoor", "description": "由校友跨屆組成的隊伍，需要在 32 小時內發想創意、分工合作，實際動手開發出能解決真實問題的作品，為生活開創更多可能～ 最終成果將在粉專揭曉，敬請期待！", "actDate": "10", "actTh": "th", "actMonth": "June, Saturday", "actTime": "08:00 AM", "people": "30", "actPlace": "台北市信義區基隆路一段178號2樓"]
-        let food: [String : Any] = ["activity_id": 1, "title": "飢餓32小時", "type":"food", "description": "由校友跨屆組成的隊伍，需要在 32 小時內發想創意、分工合作，為生命開創更多可能～ 還活著的人明天將在粉專揭曉，敬請期待！", "actDate": "11", "actTh": "th", "actMonth": "January, Sunday", "actTime": "06:00 AM", "people": "15", "actPlace": "台北市信義區基隆路一段180號"]
-        let movie: [String : Any] = ["activity_id": 2, "title": "大尾鱸鰻奇觀", "type":"movie", "description": "探索IMDB評價極限，讓你大開眼界", "actDate": "01", "actTh": "st", "actMonth": "March, Thursday", "actTime": "04:20 PM", "people": "4", "actPlace": "台北市信義區華納威秀"]
+        let outdoor: [String : Any] = ["activity_id": 0, "title": "簡報松二日遊", "type":"outdoor", "description": "由校友跨屆組成的隊伍，需要在 32 小時內發想創意、分工合作，實際動手開發出能解決真實問題的作品，為生活開創更多可能～ 最終成果將在粉專揭曉，敬請期待！", "actDate": "10", "actTh": "th", "actMonth": "June, Saturday", "actTime": "08:00 AM", "people": "30", "actPlace": "台北市信義區基隆路一段178號2樓", "coordinate" : (25.042468, 121.564879)]
+        let food: [String : Any] = ["activity_id": 1, "title": "飢餓32小時", "type":"food", "description": "由校友跨屆組成的隊伍，需要在 32 小時內發想創意、分工合作，為生命開創更多可能～ 還活著的人明天將在粉專揭曉，敬請期待！", "actDate": "11", "actTh": "th", "actMonth": "January, Sunday", "actTime": "06:00 AM", "people": "15", "actPlace": "台北市信義區基隆路一段180號", "coordinate" : (25.042468, 121.564879)]
+        let movie: [String : Any] = ["activity_id": 2, "title": "大尾鱸鰻奇觀", "type":"movie", "description": "探索IMDB評價極限，讓你大開眼界", "actDate": "01", "actTh": "st", "actMonth": "March, Thursday", "actTime": "04:20 PM", "people": "4", "actPlace": "台北市信義區華納威秀", "coordinate" : (25.035506, 121.567136)]
         
         self.activities.append(outdoor)
         self.activities.append(food)
