@@ -29,6 +29,9 @@
 		27166B761EEC673D00418212 /* ActivityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27166B751EEC673D00418212 /* ActivityDetailsViewController.xib */; };
 		27166B781EEC675600418212 /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166B771EEC675600418212 /* ActivityDetailsViewController.swift */; };
 		27166B7A1EECD31A00418212 /* CreateEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166B791EECD31A00418212 /* CreateEventTableViewCell.swift */; };
+		27166B7C1EED1F0A00418212 /* PlanBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27166B7B1EED1F0A00418212 /* PlanBViewController.xib */; };
+		27166B7E1EED1F3F00418212 /* PlanBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27166B7D1EED1F3F00418212 /* PlanBTableViewCell.xib */; };
+		27166B801EED228000418212 /* PlanBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27166B7F1EED228000418212 /* PlanBViewController.swift */; };
 		8353BEE6F286880E76D6BFAA /* Pods_PlanB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D439583ADB73006DB688AF2 /* Pods_PlanB.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		27166B751EEC673D00418212 /* ActivityDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityDetailsViewController.xib; sourceTree = "<group>"; };
 		27166B771EEC675600418212 /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		27166B791EECD31A00418212 /* CreateEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventTableViewCell.swift; sourceTree = "<group>"; };
+		27166B7B1EED1F0A00418212 /* PlanBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanBViewController.xib; sourceTree = "<group>"; };
+		27166B7D1EED1F3F00418212 /* PlanBTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlanBTableViewCell.xib; sourceTree = "<group>"; };
+		27166B7F1EED228000418212 /* PlanBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanBViewController.swift; sourceTree = "<group>"; };
 		5D439583ADB73006DB688AF2 /* Pods_PlanB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlanB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8928074F42D9D0277CD2378E /* Pods-PlanB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlanB/Pods-PlanB.debug.xcconfig"; sourceTree = "<group>"; };
 		A6F9F0B52C1D231350B54624 /* Pods-PlanB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlanB.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlanB/Pods-PlanB.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 				27166B511EEBC43800418212 /* LoginManager.swift */,
 				27166B531EEBC47E00418212 /* User.swift */,
 				27166B551EEBD9CB00418212 /* LoginViewController.swift */,
+				27166B7B1EED1F0A00418212 /* PlanBViewController.xib */,
+				27166B7D1EED1F3F00418212 /* PlanBTableViewCell.xib */,
+				27166B7F1EED228000418212 /* PlanBViewController.swift */,
 				27166B711EEC57D900418212 /* MyActivityViewController.xib */,
 				27166B731EEC5BC800418212 /* MyActivityTableViewCell.xib */,
 				27166B6D1EEC2A7800418212 /* MyActivityViewCOntroller.swift */,
@@ -203,12 +212,14 @@
 			files = (
 				27166B6A1EEC23F300418212 /* CreateEventTableViewCell.xib in Resources */,
 				27166B4A1EEBA3D200418212 /* LaunchScreen.storyboard in Resources */,
+				27166B7E1EED1F3F00418212 /* PlanBTableViewCell.xib in Resources */,
 				27166B741EEC5BC800418212 /* MyActivityTableViewCell.xib in Resources */,
 				27166B761EEC673D00418212 /* ActivityDetailsViewController.xib in Resources */,
 				27166B5C1EEBE88A00418212 /* LaunchView.xib in Resources */,
 				27166B471EEBA3D200418212 /* Assets.xcassets in Resources */,
 				27166B5E1EEBF1F600418212 /* LoginView.xib in Resources */,
 				27166B421EEBA3D200418212 /* Main.storyboard in Resources */,
+				27166B7C1EED1F0A00418212 /* PlanBViewController.xib in Resources */,
 				27166B721EEC57D900418212 /* MyActivityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +281,7 @@
 			files = (
 				27166B681EEC23D000418212 /* CreateEventTableViewController.swift in Sources */,
 				27166B661EEC23BB00418212 /* EventManager.swift in Sources */,
+				27166B801EED228000418212 /* PlanBViewController.swift in Sources */,
 				27166B6C1EEC267600418212 /* StaticResources.swift in Sources */,
 				27166B7A1EECD31A00418212 /* CreateEventTableViewCell.swift in Sources */,
 				27166B6E1EEC2A7800418212 /* MyActivityViewCOntroller.swift in Sources */,
